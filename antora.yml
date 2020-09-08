@@ -1,0 +1,6 @@
+name: training
+title: Training
+version: 'master'
+start_page: index.adoc
+nav:
+  - modules/4.0-intro-neo4j/nav.adoc
