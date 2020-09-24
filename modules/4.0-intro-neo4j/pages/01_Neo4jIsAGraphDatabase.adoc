@@ -1,7 +1,6 @@
 = Neo4j is a Graph Database
 :slug: 01-neo4j-graph-database
 :doctype: book
-:toc: left
 :toclevels: 4
 :imagesdir: ../images
 //:revealjs_totaltime: 1800

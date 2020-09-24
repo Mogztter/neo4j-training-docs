@@ -1,8 +1,8 @@
 = The Neo4j Graph Platform
 :slug: 02-neo4j-graph-platform
 :doctype: book
-:toc: left
-:toclevels: 4
+:toclevels: 2
+:page-toclevels: 1
 :imagesdir: ../images
 :module-next-title: Introduction to Cypher Queries
 
