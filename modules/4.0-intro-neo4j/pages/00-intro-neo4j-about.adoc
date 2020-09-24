@@ -5,6 +5,9 @@
 :toclevels: 4
 :imagesdir: ../images
 :module-next-title: Neo4j is a Graph Database
+:page-course-duration: 16 hrs
+:page-illustration: https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/courseLogos/IntroductionToNeo4j-4.0.jpg
+:page-type: training-course-index
 
 == About this course
 

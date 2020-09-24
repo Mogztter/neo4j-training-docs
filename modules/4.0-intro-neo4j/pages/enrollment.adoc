@@ -2,14 +2,12 @@
 :slug: introduction-to-neo4j-40
 :description: Learn about Graph Databases, Neo4j and Cypher – the Graph Query Language.
 :page-layout: training-enrollment
-:page-course-duration: 16 hrs
-:page-illustration: https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/courseLogos/IntroductionToNeo4j-4.0.jpg
 
 image::https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/courseLogos/IntroductionToNeo4j-4.0_withTitle.jpg[]
 
 == About the Course
 
-This online course is a collection of lessons and and hands-on exercises which help you build a good starting knowledge of the Neo4j 4.x DBMS.
+This online course is a collection of lessons and hands-on exercises which help you build a good starting knowledge of the Neo4j 4.x DBMS.
 It teaches the core functionality for accessing a Neo4j database.
 You will learn the foundational knowledge required to start building applications with Neo4j,
 including how to read and write data from and to the database using the Cypher language.
