@@ -7,5 +7,5 @@ nav:
 asciidoc:
   attributes:
     page-toclevels: 1
-    page-pagination: ''
+    page-pagination: '@'
     toc: ~

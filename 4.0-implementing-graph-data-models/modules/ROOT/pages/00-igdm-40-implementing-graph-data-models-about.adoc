@@ -5,9 +5,8 @@
 :toclevels: 4
 :imagesdir: ../images
 :module-next-title: Implementing Your First Model
-:page-course-duration: 4 hrs
-:page-illustration: https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/courseLogos/GraphDataModeling.jpg
 :page-type: training-course-index
+:page-pagination: next
 
 == About this course
 
