@@ -1,12 +1,8 @@
 = Implementing Graph Data Models in Neo4j 4.0
-:slug: 00-igdm-40-implementing-graph-data-models-about
-:doctype: book
-:toc: left
-:toclevels: 4
-:imagesdir: ../images
-:module-next-title: Implementing Your First Model
+:page-slug: 00-igdm-40-implementing-graph-data-models-about
 :page-type: training-course-index
 :page-pagination: next
+:page-layout: training
 
 == About this course
 

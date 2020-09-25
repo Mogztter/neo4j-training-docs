@@ -1,9 +1,7 @@
 = Summary
-:slug: 05-igdm-40-implementing-graph-data-models-summary
-:doctype: book
-:toc: left
-:toclevels: 3
-:imagesdir: ../images
+:page-slug: 05-igdm-40-implementing-graph-data-models-summary
+:page-layout: training
+:page-certificate:
 
 == Course Summary
 
@@ -91,9 +89,4 @@ ifndef::env-slides[]
 == Course feedback
 
 We want your feedback on this course. Please provide your https://forms.gle/FsajMBDd4uoe1KEn9[feedback] so we can improve this course.
-endif::[]
-
-ifndef::env-slides,backend-pdf[]
-[.certificate]
-== Certificate
 endif::[]

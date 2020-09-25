@@ -1,10 +1,7 @@
 = Refactoring Graphs
-:slug: 04-igdm-40-refactoring-graphs
-:doctype: book
-:toc: left
-:toclevels: 4
-:imagesdir: ../images
-:module-next-title: Summary
+:page-slug: 04-igdm-40-refactoring-graphs
+:page-layout: training
+:page-quiz:
 
 == About this module
 
@@ -167,7 +164,7 @@ CREATE INDEX Flight_number_index FOR (f:Flight) ON (f.number)
 --
 After you have refactored the graph, you then profile the query that you are hoping to improve.
 --
-[small]
+[.small]
 --
 Recall that the query is: What are the airports and flight information for flight number 1016 for airline WN?
 
@@ -181,7 +178,7 @@ WHERE connection.airline = 'WN' AND connection.flightNumber = '1016'
 RETURN origin.code, destination.code, connection.date, connection.departure, connection.arrival
 ----
 
-[small]
+[.small]
 --
 We must change the query to work with the new model as follows:
 --
@@ -247,7 +244,7 @@ Estimated time to complete: 30 minutes.
 
 == Adding another domain question
 
-[small]
+[.small]
 --
 We need to add another question for our application:
 
@@ -279,7 +276,7 @@ MATCH (origin:Airport {code: 'LAS'})
 WHERE flight.date = '2019-1-3'
 RETURN origin, destination, flight
 ----
-[small]
+[.small]
 --
 [NOTE]
 You will work with this query in the next exercise where you have loaded 10k nodes into the graph.
@@ -335,7 +332,7 @@ This is an instance where we do not want to remove the relationships between air
 
 image::Refactor4.png[Refactor4,width=1000,align=center]
 
-[small]
+[.small]
 --
 [NOTE]
 You only pull out a node if you are going to query through it, otherwise a property will suffice.
@@ -412,7 +409,7 @@ MERGE (destination)-[:HAS_DAY]->(destinationAirportDay)
 After a refactor, you should check that all queries perform OK. Here is our first query: What are the airports and flight information for flight number 1016 for airline WN?
 --
 
-[.is-two-thirds.left]
+[.is-two-thirds.left-column]
 --
 [source,cypher]
 ----
@@ -426,7 +423,7 @@ WHERE flight.airline = 'WN' AND
 
 ////
 ifdef::env-slides[]
-[is-one-third.right]
+[is-one-third.right-column]
 --
 image::FirstQueryAfterRefactor4.png[FirstQueryAfterRefactor4,width=200,align=center]
 --
@@ -450,7 +447,7 @@ This query previously had 34 db hits, but now has 181. But, we added another 10K
 Then we want to profile our second query after the refactor: Find all the flights going from Los Angeles (LAS) to Chicago Midway International (MDW) on the 3rd January, 2019.
 --
 
-[.is-two-thirds.left]
+[.is-two-thirds.left-column]
 --
 [source,cypher]
 ----
@@ -464,7 +461,7 @@ RETURN origin, destination, flight
 --
 
 ifdef::env-slides[]
-[.is-one-third.right]
+[.is-one-third.right-column]
 --
 image::OriginalSecondQueryAfterRefactor4.png[OriginalSecondQueryAfterRefactor4,width=160,align=center]
 --
@@ -489,7 +486,7 @@ Here is a rewrite of the second query: Find all the flights going from Los Angel
 Due to the change in the model, we must rewrite the  query as:
 --
 
-[.is-two-thirds.left]
+[.is-two-thirds.left-column]
 --
 [source,cypher]
 ----
@@ -508,7 +505,7 @@ image::SecondQueryAfterRefactor4.png[SecondQueryAfterRefactor4,width=400,align=c
 endif::[]
 
 ifdef::env-slides[]
-[.is-one-third.right]
+[.is-one-third.right-column]
 --
 image::SecondQueryAfterRefactor4.png[SecondQueryAfterRefactor4,width=160,align=center]
 --
@@ -541,7 +538,7 @@ Estimated time to complete: 30 minutes.
 [.half-column]
 == More questions for the model?
 
-[small]
+[.small]
 --
 We now have a model that is performs well for these questions:
 
@@ -564,7 +561,7 @@ In this case, we  leave both models in place, and use each one for the questions
 [.two-thirds-one-third-column]
 == Another question for the model
 
-[.is-two-thirds.left]
+[.is-two-thirds.left-column]
 --
 [.statement]
 Suppose we added this question: What are the flights from LAS that arrive at MDW on 2019-1-3?
@@ -575,7 +572,7 @@ Suppose we added this question: What are the flights from LAS that arrive at MDW
 To answer this question with the current model our query would be:
 --
 
-[.is-two-thirds.left]
+[.is-two-thirds.left-column]
 --
 [source, cypher]
 ----
@@ -599,7 +596,7 @@ image::LASToMDWBad.png[LASToMDWBad,width=400,align=center]
 endif::[]
 
 ifdef::env-slides[]
-[.is-one-third.right]
+[.is-one-third.right-column]
 --
 image::LASToMDWBad.png[LASToMDWBad,width=110,align=center]
 --
@@ -626,7 +623,7 @@ image::SpecificRelationshipsModel.png[SpecificRelationshipsModel,width=600,align
 
 === APOC to the rescue!
 
-[small]
+[.small]
 --
 With APOC, you can create relationships based upon data in the graph.
 
@@ -676,7 +673,7 @@ image::APOCToRefactor.png[APOCToRefactor,width=900,align=center]
 [.statement]
 Since the model has changed, we need to rewrite the query:
 
-[.is-three-quarters.left]
+[.is-three-quarters.left-column]
 --
 [source, cypher]
 ----
@@ -698,7 +695,7 @@ image::AfterAPOCRefactor.png[AfterAPOCRefactor,width=300,align=center]
 endif::[]
 
 ifdef::env-slides[]
-[.is-one-quarter.right]
+[.is-one-quarter.right-column]
 --
 image::AfterAPOCRefactor.png[AfterAPOCRefactor,width=120,align=center]
 --
@@ -753,7 +750,7 @@ For example increase these values for the server in the *neo4j.conf* file:
 Here is one way that you can control how much work is done for a refactoring:
 --
 
-[small]
+[.small]
 --
 . Tag all the nodes we need to process with a temporary label (for example _Process_).
 

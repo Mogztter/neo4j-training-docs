@@ -1,10 +1,7 @@
 = Importing Data into the Graph
-:slug: 02-igdm-40-importing-data-graph
-:doctype: book
-:toc: left
-:toclevels: 4
-:imagesdir: ../images
-:module-next-title: Profiling Queries
+:page-slug: 02-igdm-40-importing-data-graph
+:page-layout: training
+:page-quiz:
 
 == About this module
 
