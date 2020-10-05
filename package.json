@@ -2,7 +2,6 @@
   "name": "@neo4j/graphacademy",
   "version": "1.0.0",
   "description": "Neo4j GraphAcademy",
-  "main": "index.js",
   "scripts": {
     "start": "node start.js",
     "watch": "node watch.js",
@@ -18,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Mogztter/neo4j-training-docs/issues"
   },
-  "homepage": "https://github.com/Mogztter/neo4j-training-docs.#readme",
+  "homepage": "https://github.com/Mogztter/neo4j-training-docs#readme",
   "devDependencies": {
     "@antora/cli": "^2.3.4",
     "@antora/site-generator-default": "^2.3.4",

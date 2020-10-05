@@ -1,0 +1,17 @@
+= Neo4j Training
+
+== Install
+
+Install the dependencies using `npm`:
+
+ npm i
+
+== Live Preview
+
+To preview the docs run:
+
+ npm run watch
+
+This will build a set of HTML files in the [.path]_public_ directory and then serve them through BrowserSync at http://localhost:3000.
+The dev script will also listen for changes and automatically rebuild the files automatically.
+Your browser will automatically reload the page.
