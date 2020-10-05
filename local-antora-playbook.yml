@@ -24,6 +24,7 @@ urls:
 
 asciidoc:
   attributes:
+    experimental: ''
     page-component: training
     page-theme: training
     page-canonical-root: /training-welcome
