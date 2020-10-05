@@ -1,0 +1,33 @@
+site:
+  title: Neo4j GraphAcademy
+  start_page: training-welcome::index.adoc
+
+content:
+  sources:
+  - url: .
+    branches: 'HEAD'
+    start_paths:
+      - 'home'
+      - '4.0-intro-neo4j'
+      - '4.0-implementing-graph-data-models'
+
+output:
+  dir: ./public/
+
+ui:
+  bundle:
+    url: https://github.com/Mogztter/docs-refresh/raw/training/ui/build/ui-bundle.zip
+    snapshot: true
+
+urls:
+  html_extension_style: indexify
+
+asciidoc:
+  attributes:
+    page-component: training
+    page-theme: training
+    page-canonical-root: /training-welcome
+    page-breadcrumbs:
+      - name: Neo4j Training
+        url: /training-welcome
+

@@ -26,7 +26,7 @@ At the end of this module, you should be able to write Cypher statements to:
 
 [.notes]
 --
-Recall that a node is an element of a graph representing a domain entity that has zero or more labels, properties, and relationships to or from other nodes in the graph. 
+Recall that a node is an element of a graph representing a domain entity that has zero or more labels, properties, and relationships to or from other nodes in the graph.
 
 When you create a node, you can add it to the graph without connecting it to another node.
 In virtually all cases, the nodes that you create in a graph will be connected to other nodes and you will learn about creating these connections (relationships) in the next lesson of this training.
@@ -101,7 +101,7 @@ image::CreateBatmanBegins.png[CreateBatmanBegins,width=600,align=center]
 Here is the node when we retrieve it. It is the only node in the graph with a label of _Action_ so to retrieve it from the graph is straightforward where we only specify the node labels.
 --
 
-[is-half.right]
+[.is-half.right]
 --
 
 image::RetrieveBatmanBegins.png[RetrieveBatmanBegins,width=400,align=center]
@@ -109,7 +109,7 @@ image::RetrieveBatmanBegins.png[RetrieveBatmanBegins,width=400,align=center]
 
 [.notes]
 --
-When the graph engine creates a node, it automatically assigns a read-only, unique ID to the node.  
+When the graph engine creates a node, it automatically assigns a read-only, unique ID to the node.
 Here we see that the _id_ of the node is _171_. This is not a property of a node, but rather an internal value.
 
 After you have created a node, you can add more properties or labels to it and most importantly, connect it to another node.
@@ -128,7 +128,7 @@ Here is an example, where we create some _Person_ nodes that will represent some
 --
 [source,cypher]
 ----
-CREATE 
+CREATE
 (:Person {name: 'Michael Caine', born: 1933}),
 (:Person {name: 'Liam Neeson', born: 1952}),
 (:Person {name: 'Katie Holmes', born: 1978}),
@@ -212,7 +212,7 @@ Notice here that we call the built-in function, `labels()` that returns the set 
 
 [.notes]
 --
-Perhaps your data model has changed or the underlying data for a node has changed so that the label for a node is no longer useful or valid. 
+Perhaps your data model has changed or the underlying data for a node has changed so that the label for a node is no longer useful or valid.
 
 Here is the simplified syntax for removing a label from a node:
 --
@@ -274,7 +274,7 @@ SET x.propertyName = value
 
 [source.big,cypher]
 ----
-SET x.propertyName1 = value1	, x.propertyName2 = value2 
+SET x.propertyName1 = value1	, x.propertyName2 = value2
 ----
 
 [source.big,cypher]
@@ -289,9 +289,9 @@ SET x += {propertyName1: value1, propertyName2: value2}
 
 [.notes]
 --
-If the property does not exist, it is added to the node. If the property exists, its value is updated. If the value specified is `null`, the property is removed. 
+If the property does not exist, it is added to the node. If the property exists, its value is updated. If the value specified is `null`, the property is removed.
 
-Note that the type of data for a property is not enforced.  
+Note that the type of data for a property is not enforced.
 That is, you can assign a string value to a property that was once a numeric value and visa versa.
 
 When specify the JSON-style object for assignment (using `=`) of the property values for the node, the object must include all of the properties and their values for the node as the existing properties for the node are overwritten. However, if you specify `+=` when assigning to a property, the value at _valueX_ is updated if _propertyNnameX_ exists for the node. If  _propertyNameX_ does not exist for the node, then the property is added to the node.
@@ -328,10 +328,10 @@ Here is another example where we set the property values to the movie node using
 ----
 MATCH (m:Movie)
 WHERE m.title = 'Batman Begins'
-SET  m = {title: 'Batman Begins', 
-          released: 2005, 
-          lengthInMinutes: 140, 
-          videoFormat: 'DVD', 
+SET  m = {title: 'Batman Begins',
+          released: 2005,
+          lengthInMinutes: 140,
+          videoFormat: 'DVD',
           grossMillions: 206.5}
 RETURN m
 ----
@@ -473,7 +473,7 @@ Estimated time to complete: 30 minutes.
 === Question 1
 
 [.statement]
-What Cypher clauses can you use to create a node? 
+What Cypher clauses can you use to create a node?
 
 [.statement]
 Select the correct answers.
