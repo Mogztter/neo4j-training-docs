@@ -36,8 +36,9 @@ async function process () {
 watcher.on('change', async _ => await process())
 watcher.on('unlink', async _ => await process())
 
-await process()
-
-bs.init({
-  server: './public'
-})
+;(async () => {
+  await process()
+  bs.init({
+    server: './public'
+  })
+})()
