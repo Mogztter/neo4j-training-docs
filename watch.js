@@ -4,10 +4,6 @@ const generator = require('@antora/site-generator-default')
 const Lock = require('./lock.js')
 const processorLock = new Lock()
 
-bs.init({
-  server: './public'
-})
-
 const antoraArgs = ['--playbook', 'local-antora-playbook.yml']
 
 const watcher = chokidar.watch([
@@ -28,7 +24,7 @@ async function process () {
     const hasQueuedEvents = await processorLock.acquire()
     if (!hasQueuedEvents) {
       await generator(antoraArgs, process.env)
-      bs.reload("*")
+      bs.reload()
     }
   } catch (err) {
     console.error(err)
@@ -40,4 +36,8 @@ async function process () {
 watcher.on('change', async _ => await process())
 watcher.on('unlink', async _ => await process())
 
-process()
+await process()
+
+bs.init({
+  server: './public'
+})

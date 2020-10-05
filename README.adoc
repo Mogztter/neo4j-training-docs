@@ -1,5 +1,9 @@
 = Neo4j Training
 
+== Prerequisites
+
+Make sure that the latest LTS of [Node.js](https://nodejs.org) is installed on your machine.
+
 == Install
 
 Install the dependencies using `npm`:
