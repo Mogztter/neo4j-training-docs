@@ -2,7 +2,7 @@
 
 == Prerequisites
 
-Make sure that the latest LTS of [Node.js](https://nodejs.org) is installed on your machine.
+Make sure that the latest LTS of https://nodejs.org[Node.js] is installed on your machine.
 
 == Install
 
